@@ -110,6 +110,9 @@ public class KeycloakSmsAuthenticatorCredentialProvider implements CredentialPro
         List<CredentialModel> credsExp = session.userCredentialManager().getStoredCredentialsByType(realm, user, KeycloakSmsAuthenticatorConstants.USR_CRED_MDL_SMS_EXP_TIME);
         if (!creds.isEmpty()) {
             user.getCachedWith().put(getCacheKeyForType(KeycloakSmsAuthenticatorConstants.USR_CRED_MDL_SMS_CODE), creds.get(0));
+        }
+
+        if (!credsExp.isEmpty()) {
             user.getCachedWith().put(getCacheKeyForType(KeycloakSmsAuthenticatorConstants.USR_CRED_MDL_SMS_EXP_TIME), credsExp.get(0));
         }
     }
