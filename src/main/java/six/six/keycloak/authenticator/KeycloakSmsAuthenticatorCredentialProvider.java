@@ -79,7 +79,7 @@ public class KeycloakSmsAuthenticatorCredentialProvider implements CredentialPro
             set.add(KeycloakSmsAuthenticatorConstants.USR_CRED_MDL_SMS_EXP_TIME);
             return set;
         } else {
-            return Collections.EMPTY_SET;
+            return Collections.<String>emptySet();
         }
 
     }
