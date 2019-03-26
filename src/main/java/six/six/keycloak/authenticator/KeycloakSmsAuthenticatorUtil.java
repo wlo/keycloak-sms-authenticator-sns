@@ -221,7 +221,7 @@ public class KeycloakSmsAuthenticatorUtil {
 
     /**
      * This validation matches the registration flow's validation
-     * https://github.com/UKGovernmentBEIS/beis-mspsds/blob/master/keycloak/providers/registration-form/src/main/java/uk/gov/beis/mspsds/keycloak/providers/RegistrationMobileNumber.java#L55
+     * https://github.com/UKGovernmentBEIS/beis-mspsds/blob/master/keycloak/providers/registration-form/src/main/java/uk/gov/beis/opss/keycloak/providers/RegistrationMobileNumber.java#L55
      */
     public static boolean isPhoneNumberValid(String phoneNumber) {
         String formattedPhoneNumber = convertInternationalPrefix(phoneNumber);
